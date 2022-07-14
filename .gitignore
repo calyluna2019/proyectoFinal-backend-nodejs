@@ -1,1 +1,3 @@
 node_modules/
+.env
+/config/backend-nodejs-final-firebase-adminsdk-uie4l-ded62f7c3f.json

@@ -1,4 +1,6 @@
 const express = require('express');
+require('dotenv').config();
+const { mongoConnection } = require('../config/globals');
 
 class Server {
 
@@ -10,9 +12,15 @@ class Server {
             productos: '/api/productos',
             carrito: '/api/carrito'
         }
-
+        this.conectarDB();
         this.middlewares();
         this.routes();
+    }
+
+    async conectarDB(){
+        if (process.env.ENGINE == 'MONGODB'){
+            await mongoConnection();
+        }
     }
 
     middlewares() {
