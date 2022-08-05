@@ -35,6 +35,6 @@ ProductoSchema.methods.toJSON = function(){
     const {__v,_id,...data} = this.toObject();
     data.id = _id;
     return data;
-  }
+}
 
 module.exports = mongoose.model('Producto', ProductoSchema);

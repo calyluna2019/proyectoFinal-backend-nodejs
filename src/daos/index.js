@@ -1,32 +1,20 @@
 require('dotenv').config();
-const ProductoDaoArchivo = require('./productos/ProductoDaoArchivo');
-const ProductoDaoFirebase = require('./productos/ProductoDaoFirebase');
 const ProductoDaoMongoDb = require('./productos/ProductoDaoMongoDb');
-
-const CarritoDaoArchivo = require('./carritos/CarritoDaoArchivo');
-const CarritoDaoFirebase = require('./carritos/CarritoDaoFirebase');
 const CarritoDaoMongoDb = require('./carritos/CarritoDaoMongoDb');
+const UserDaoMongoDb = require('./users/UserDaoMongoDb');
 
 let ProductoDao;
 let CarritoDao;
-
-if (process.env.ENGINE == 'ARCHIVO'){
-    ProductoDao = ProductoDaoArchivo;
-    CarritoDao = CarritoDaoArchivo;
-}
+let UserDao;
 
 if (process.env.ENGINE == 'MONGODB'){
     ProductoDao = ProductoDaoMongoDb;
     CarritoDao = CarritoDaoMongoDb;
+    UserDao = UserDaoMongoDb;
 }
-
-if (process.env.ENGINE == 'FIREBASE'){
-    ProductoDao = ProductoDaoFirebase;
-    CarritoDao = CarritoDaoFirebase;
-}
-
 
 module.exports = {
     ProductoDao,
-    CarritoDao
+    CarritoDao,
+    UserDao
 }

@@ -6,13 +6,14 @@ const {
     addProductoCarrito,
     deleteProductoCarrito
 } = require('../controllers/carritos.controller');
+const { sessionAdmin } = require('../middlewares/sessionAdmin');
 
 const router = Router();
 
-router.post('/',createCarrito)
-router.delete('/:id',deleteCarrito)
-router.get('/:id/productos',getProductosCarrito)
-router.post('/:id/productos',addProductoCarrito)
-router.delete('/:id/productos/:id_prod',deleteProductoCarrito)
+router.post('/', sessionAdmin, createCarrito)
+router.delete('/:id', sessionAdmin, deleteCarrito)
+router.get('/:id/productos', sessionAdmin, getProductosCarrito)
+router.post('/:id/productos', sessionAdmin, addProductoCarrito)
+router.delete('/:id/productos/:id_prod', sessionAdmin, deleteProductoCarrito)
 
 module.exports = router;

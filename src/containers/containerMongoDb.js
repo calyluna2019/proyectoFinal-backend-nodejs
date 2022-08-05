@@ -45,6 +45,15 @@ class ContainerMongoDb {
             return `Error:"${error.message}"`
         }
     }
+    async getByColumn(column) {
+        try{
+            const isExists = await this.model.findOne({ column });
+            return isExists;
+        }
+        catch(error){
+            return `Se produjo un error:"${error}"`
+        }
+    }
     async updateById(id,item) {
         try{
             const updated = await this.model.findOneAndUpdate({ _id: id },item);
