@@ -12,7 +12,7 @@ Se hizo desploy de la misma en la siguiente url: "https://ecommerce-nodejs-final
 
 ## Rol ADMIN:
 1) en ruta "/api/info" tiene permisos luego de Login a la informacion solicitada, credenciales para verificar el envio de email con Ethereal Email.
-2) tiene acceso a guardar, editar y borrar productos.
+2) tiene acceso a guardar POST-"/api/productos", editar PUT-"/api/productos/:id_producto" y borrar productos DELETE-"/api/productos/id_producto".
 
 ## Rol CLIENTE:
 1) crear usuario desde api POST-"/api/users" con rol "CLIENTE" se notificara con envio de email su respuesta y confirmacion de registro.
