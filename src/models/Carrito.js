@@ -2,14 +2,19 @@ const mongoose = require('mongoose');
 const Producto = require('./Producto');
 
 const CarritoSchema = new mongoose.Schema({
+    productos: {
+        type: Array,
+        default: []
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
     timestamp:{
         type: Number,
         required: false,
-    },
-    productos : [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Producto'
-    }]
+    }
 });
 
 CarritoSchema.methods.toJSON = function(){

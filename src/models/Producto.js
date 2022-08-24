@@ -25,6 +25,10 @@ const ProductoSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    categoria: {
+        type: String,
+        required: true
+    },
     timestamp: {
         type: Number,
         required: true

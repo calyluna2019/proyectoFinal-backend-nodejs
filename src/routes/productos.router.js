@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const {
     getProductos,
+    getProductosCategoria,
     saveProducto,
     updateProducto,
     deleteProducto
@@ -12,6 +13,7 @@ const { sessionAdmin } = require('../middlewares/sessionAdmin');
 const router = Router();
 
 router.get('/:id?', sessionAdmin, getProductos);
+router.get('/categoria/:categoria', sessionAdmin, getProductosCategoria);
 router.post('/', administrador, saveProducto);
 router.put('/:id', administrador, updateProducto);
 router.delete('/:id', administrador, deleteProducto);

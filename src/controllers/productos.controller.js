@@ -3,7 +3,6 @@ const product = ProductoDao.newProductDao();
 
 async function getProductos(req, res) {
     const id = req.params.id || null;
-
     if (id !== null){
         const producto = await product.getById(id);
         if (producto !== null){
@@ -16,7 +15,15 @@ async function getProductos(req, res) {
         res.status(200).json(productos);
     }
 }
-
+async function getProductosCategoria(req, res) {
+    const categoria = req.params.categoria || null;
+    const productosCategoria = await product.getAll({categoria});
+    if (productosCategoria.length > 0) {
+        res.status(200).json(productosCategoria);
+    } else {
+        res.status(400).json({error:'Categoria no encontrada'});
+    }
+}
 async function saveProducto(req, res) {
     const productos = req.body;
     const saveProd = await product.save(productos);
@@ -29,7 +36,6 @@ async function saveProducto(req, res) {
 async function updateProducto(req, res) {
     const id = req.params.id;
     const producto = await product.getById(id);
-
     if (producto.id) {
         await product.updateById(id, req.body);
         res.status(200).json({msg: 'Actualizado Ok',id});
@@ -52,6 +58,7 @@ async function deleteProducto(req, res) {
 
 module.exports = {
     getProductos,
+    getProductosCategoria,
     saveProducto,
     updateProducto,
     deleteProducto

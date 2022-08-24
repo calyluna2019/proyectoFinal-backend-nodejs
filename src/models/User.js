@@ -27,9 +27,9 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    imageProfile: {
+    rol: {
         type: String,
-        required: false,
+        required: true,
     }
 })
 

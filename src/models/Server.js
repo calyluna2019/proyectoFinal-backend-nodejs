@@ -4,7 +4,6 @@ const { mongoConnection } = require('../config/globals');
 const bodyParser = require("body-parser");
 const path = require("path");
 const cookieParser = require("cookie-parser");
-const { engine } = require("express-handlebars");
 const passport = require("passport");
 const storeMongo = require("connect-mongo");
 const session = require("express-session");
@@ -19,7 +18,10 @@ class Server {
             productos: '/api/productos',
             carrito: '/api/carrito',
             users: '/api/users',
-            auth: '/api/auth'
+            auth: '/api/auth',
+            chat: '/api/chats',
+            orden: '/api/orden',
+            info: '/api/info'
         }
         this.conectarDB();
         this.middlewares();
@@ -34,15 +36,10 @@ class Server {
 
     middlewares() {
         this.app.use(express.json());
-        // this.app.use(express.static('public'));
         this.app.use(bodyParser.urlencoded({ extended: true }));
-        /* this.app.use(engine({
-            layoutsDir: path.join(__dirname, "../../views/layouts"),
-            defaultLayout: "index",
-            extname: ".hbs",
-        })); */
-        this.app.set("views", path.join(__dirname, "../../views"));
-        this.app.set("view engine", "hbs");
+        /* No maneja vistas el proyecto */
+        /* this.app.set("views", path.join(__dirname, "../../views"));
+        this.app.set("view engine", "hbs"); */
         this.app.use(cookieParser());
         this.app.use(session({
                 store: storeMongo.create({
@@ -53,7 +50,7 @@ class Server {
                 rolling: true,
                 resave: false,
                 saveUninitialized: false,
-                cookie: { maxAge: 600 * 1000 },
+                cookie: { maxAge: 600000 }, // 10 min
             })
         );
         this.app.use(passport.initialize());
@@ -65,6 +62,9 @@ class Server {
         this.app.use(this.paths.carrito, require('../routes/carritos.router'));
         this.app.use(this.paths.users, require('../routes/users.router'));
         this.app.use(this.paths.auth, require('../routes/auth.router'));
+        this.app.use(this.paths.chat, require('../routes/mensajes.router'));
+        this.app.use(this.paths.orden, require('../routes/ordenes.router'));
+        this.app.use(this.paths.info, require('../routes/info.router'));
 
         this.app.use('*', (req, res) => {
             const path = req.originalUrl;

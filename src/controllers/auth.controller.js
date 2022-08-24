@@ -1,6 +1,6 @@
 const postLogin = (req, res) => {
-    const {password, nombre, direccion, email} = req.user;
-    res.send({nombre,direccion,email});
+    const {password, nombre, direccion, email, rol} = req.user;
+    res.send({nombre,direccion,email,rol});
 };
 
 const getFailLogin = (req, res) => {

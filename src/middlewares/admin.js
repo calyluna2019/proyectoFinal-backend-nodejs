@@ -1,11 +1,10 @@
 const { response } = require('express');
 
-/* provisorio */
-const admin = true;
 const administrador = ( req, res = response, next ) => {
+    const admin = req.user.rol;
     const path = req.originalUrl;
     const metodo = req.method;
-    if (!admin){
+    if (admin !== "ADMIN"){
         return res.status(401).json({
             error: -1,
             descripcion:`ruta ${path} método ${metodo} no autorizada`

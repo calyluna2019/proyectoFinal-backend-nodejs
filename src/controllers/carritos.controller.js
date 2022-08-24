@@ -2,7 +2,8 @@ const { CarritoDao } = require('../daos/index');
 const carrito = CarritoDao.newCartDao();
 
 async function createCarrito(req, res) {
-    const data = await carrito.createCarrito();
+    const { email } = req.user;
+    const data = await carrito.createCarrito(email);
     if(data.id) {
         res.status(201).json({msg: 'Registro Exitoso!',id:data.id});
     } else {
@@ -33,8 +34,12 @@ async function addProductoCarrito(req, res) {
     const productos = req.body;
     const carritoById = await carrito.getById(id);
     if (carritoById.id) {
-        await carrito.saveProduct(productos, id);
-        res.status(200).json({msg:"Productos Agregados."});
+        const response = await carrito.saveProduct(productos, id);
+        if(response.id) {
+            res.status(200).json({msg:"Producto Agregado.",response});
+        } else {
+            res.status(400).json({error:response});
+        }
     } else {
         res.status(400).json({error:carritoById});
     }
@@ -45,8 +50,8 @@ async function deleteProductoCarrito(req, res) {
     const carritoById = await carrito.getById(id);
     if (carritoById.id) {
         const carritoDelete = await carrito.deleteProduct(id_prod, id);
-        if(carritoDelete.productos.length > 0) {
-            res.status(200).json({mensaje: `Se ha eliminado el producto ${id_prod} del carrito: ${id}`});
+        if(carritoDelete.id) {
+            res.status(200).json({mensaje: "Ok Producto Eliminado",id_producto:id_prod,id_carrito:id});
         } else {
             res.status(400).json({error:"Id Producto incorrecto"});
         }

@@ -11,16 +11,16 @@ class ContainerMongoDb {
             return data;
         }
         catch(error){
-            return `Se produjo un error:"${error}"`
+            return `Se produjo un error: ${error}`
         }
     }
-    async getAll() {
+    async getAll(param = {}) {
         try{
-            const all = await this.model.find({});
+            const all = await this.model.find(param);
             return all;
         }
         catch(error){
-            return `Se produjo un error:"${error}"`
+            return `Se produjo un error: ${error}`
         }
     }
     async deleteById(id) {
@@ -29,29 +29,19 @@ class ContainerMongoDb {
             return id;
         }
         catch(error){
-            return `Se produjo un error:"${error}"`
+            return `Se produjo un error: ${error}`
         }
     }
     async getById(id) {
         try{
-            if (mongoose.Types.ObjectId.isValid(id)) {
-                const item = await this.model.findById(id);
-                return item;
-            } else {
-                throw new Error("Id incorrecto");
+            const item = await this.model.findById(id);
+            if(!item) {
+                throw new Error;
             }
+            return item;
         }
         catch(error){
-            return `Error:"${error.message}"`
-        }
-    }
-    async getByColumn(column) {
-        try{
-            const isExists = await this.model.findOne({ column });
-            return isExists;
-        }
-        catch(error){
-            return `Se produjo un error:"${error}"`
+            return `Se produjo un error: Id incorrecto`
         }
     }
     async updateById(id,item) {
@@ -60,7 +50,15 @@ class ContainerMongoDb {
             return updated;
         }
         catch(error){
-            return `Se produjo un error:"${error}"`
+            return `Se produjo un error: ${error}`
+        }
+    }
+    async searchBy(item) {
+        try{
+            return await this.model.findOne(item);
+        }
+        catch(error){
+            return `Se produjo un error: ${error}`;
         }
     }
 }
