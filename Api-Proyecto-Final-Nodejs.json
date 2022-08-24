@@ -14,12 +14,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/productos/6304ef2c70044a6269d3d316",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/productos/6304ef2c70044a6269d3d316",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"productos",
@@ -44,12 +45,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/productos",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/productos",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"productos"
@@ -73,12 +75,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/productos/6304ef2c70044a6269d3d316",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/productos/6304ef2c70044a6269d3d316",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"productos",
@@ -94,12 +97,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/productos/6304eef270044a6269d3d310",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/productos/6304eef270044a6269d3d310",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"productos",
@@ -115,12 +119,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/productos/categoria/teclados",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/productos/categoria/teclados",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"productos",
@@ -137,12 +142,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/productos",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/productos",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"productos"
@@ -162,12 +168,13 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/carrito",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/carrito",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"carrito"
@@ -182,12 +189,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/carrito/63053726b45432ac9f426897",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/carrito/63053726b45432ac9f426897",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"carrito",
@@ -203,12 +211,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/carrito/63053766b45432ac9f42689d/productos",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/carrito/63053766b45432ac9f42689d/productos",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"carrito",
@@ -234,12 +243,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/carrito/63053766b45432ac9f42689d/productos",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/carrito/63053766b45432ac9f42689d/productos",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"carrito",
@@ -256,12 +266,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/carrito/63053766b45432ac9f42689d/productos/6304eeb970044a6269d3d30d",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/carrito/63053766b45432ac9f42689d/productos/6304eeb970044a6269d3d30d",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"carrito",
@@ -293,12 +304,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/users",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/users",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"users"
@@ -313,12 +325,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/users",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/users",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"users"
@@ -342,12 +355,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/users/6305310f4a1c4266cdb932a5",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/users/6305310f4a1c4266cdb932a5",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"users",
@@ -377,12 +391,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/chats",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/chats",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"chats"
@@ -397,12 +412,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/chats/cliente1@gmail.com",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/chats/cliente1@gmail.com",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"chats",
@@ -423,12 +439,13 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/orden",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/orden",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"orden"
@@ -443,12 +460,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/orden",
-							"protocol": "http",
+							"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/orden",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"ecommerce-nodejs-final",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"orden"
@@ -474,12 +492,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/auth/login",
-					"protocol": "http",
+					"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/auth/login",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-nodejs-final",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"auth",
@@ -495,12 +514,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/auth/logout",
-					"protocol": "http",
+					"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/auth/logout",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-nodejs-final",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"auth",
@@ -516,12 +536,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/info",
-					"protocol": "http",
+					"raw": "https://ecommerce-nodejs-final.herokuapp.com/api/info",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-nodejs-final",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"info"
