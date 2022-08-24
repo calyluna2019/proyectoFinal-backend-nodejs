@@ -11,7 +11,7 @@ Hay un archivo ```.json``` en el root de proyecto con el nombre ```Api-Proyecto-
 Se hizo desploy de la misma en la siguiente url: "https://ecommerce-nodejs-final.herokuapp.com/".
 
 ## Rol ADMIN:
-1) en ruta "/api/info" tiene permisos luego de Login a la informacion solicitada, credenciales para verificar el envio de email con Ethereal Email.
+1) en ruta GET-"/api/info" tiene permisos luego de Login a la informacion solicitada, credenciales para verificar el envio de email con Ethereal Email.
 2) tiene acceso a guardar POST-"/api/productos", editar PUT-"/api/productos/:id_producto" y borrar productos DELETE-"/api/productos/id_producto".
 
 ## Rol CLIENTE:
