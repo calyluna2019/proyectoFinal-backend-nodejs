@@ -10,7 +10,6 @@ async function getOrdenes(req, res) {
 async function guardarOrden(req, res) {
     const ordenEmail = req.user.email;
     const response = await order.saveOrder(ordenEmail);
-    console.log(response)
     if (response.id) {
         await enviarEmail('nuevaOrden', 'Nueva orden', response)
         res.status(200).json({msg:"Orden creado.",response});

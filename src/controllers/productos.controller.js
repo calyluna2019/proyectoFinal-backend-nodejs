@@ -5,7 +5,7 @@ async function getProductos(req, res) {
     const id = req.params.id || null;
     if (id !== null){
         const producto = await product.getById(id);
-        if (producto !== null){
+        if (producto.id){
             res.status(200).json(producto);
         } else {
             res.status(400).json({error:'producto no encontrado'});
